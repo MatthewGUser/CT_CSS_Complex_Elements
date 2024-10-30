@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#feedback">Feedback</a></li> <!-- Feedback link -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home-section">
+        <h2>Welcome to the Entertainment Hub</h2>
+        <p>This is the home page, where we introduce you to the best of entertainment!</p>
+    </section>
+
+    <!-- Movies Section with Gallery and CTA Button -->
+    <section id="movies-section" style="display: none;">
+        <h2>Movies</h2>
+        <p>Explore a collection of top-rated movies from various genres.</p>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Assets/movie1.jpg" alt="Movie Poster">
+                <button class="cta-button">Watch Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section with Gallery and CTA Button -->
+    <section id="music-section" style="display: none;">
+        <h2>Music</h2>
+        <p>Discover popular albums, artists, and playlists curated just for you.</p>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Assets/album1.jpg" alt="Album Cover">
+                <button class="cta-button">Listen Here</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section with Gallery and CTA Button -->
+    <section id="games-section" style="display: none;">
+        <h2>Games</h2>
+        <p>Dive into the world of games and explore trending titles across platforms.</p>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Assets/game1.jpg" alt="Game Screenshot">
+                <button class="cta-button">Play Game</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback-section" style="display: none;">
+        <h2>Feedback</h2>
+        <p>We'd love to hear your thoughts! Please leave your comments, ratings, or suggestions below.</p>
+        <form id="feedback-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="" disabled selected>Select Rating</option> <!-- Placeholder option -->
+                <option value="5">Excellent</option>
+                <option value="4">Very Good</option>
+                <option value="3">Good</option>
+                <option value="2">Fair</option>
+                <option value="1">Poor</option>
+            </select>
+
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments"></textarea>
+
+            <button type="submit" class="submit-button">Submit Feedback</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Entertainment Hub</p>
+    </footer>
+
+    <!-- JavaScript for Section Navigation -->
+    <script>
+        // JavaScript to handle navigation clicks and show/hide sections
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute("href").replace("#", "") + "-section";
+
+                // Hide all sections
+                document.querySelectorAll("section").forEach(section => {
+                    section.style.display = "none";
+                });
+
+                // Show the selected section
+                document.getElementById(sectionId).style.display = "block";
+            });
+        });
+
+        // Show the Home section by default
+        document.getElementById("home-section").style.display = "block";
+    </script>
+</body>
+</html>

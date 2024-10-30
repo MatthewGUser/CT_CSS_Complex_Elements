@@ -1,0 +1,180 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+section {
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Gallery Layout */
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Image Styling */
+.gallery img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 10px;
+}
+
+/* Hover Effect on Images */
+.gallery img:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+    opacity: 0.9; /* Slightly dim the image */
+}
+
+/* CTA Button Styling */
+.cta-button {
+    background-color: #ff4500;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff6347;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Feedback Section Styling */
+#feedback-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#feedback-section h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#feedback-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Input, Select, and Textarea Styling */
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form select,
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover and Focus Effects for Form Fields */
+#feedback-form input[type="text"]:hover,
+#feedback-form input[type="email"]:hover,
+#feedback-form select:hover,
+#feedback-form textarea:hover,
+#feedback-form input[type="text"]:focus,
+#feedback-form input[type="email"]:focus,
+#feedback-form select:focus,
+#feedback-form textarea:focus {
+    border-color: #ff4500;
+    box-shadow: 0px 0px 5px rgba(255, 69, 0, 0.5);
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #ff6347;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
